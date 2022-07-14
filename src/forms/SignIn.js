@@ -10,7 +10,7 @@ export default function signIn(props) {
   return (<>
   <div className='container-fluid'> 
     <div className='row justify-content-evenly'>
-        <div className='col-6 card mt-5 mb-5 p-3 '> 
+        <div className='col-md-6 card mt-5 mb-5 p-3 '> 
             <form onSubmit={props.signin}>
                 <div className='text-center mb-3'>
                     <h3>LogIn</h3>

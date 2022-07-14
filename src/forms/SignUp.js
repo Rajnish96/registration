@@ -10,7 +10,7 @@ export default function SignUp(props) {
   return(<>
   <div className='container-fluid'>
     <div className='row justify-content-evenly'>
-        <div className='col-6 card mt-5 mb-5 p-3 '>
+        <div className='col-md-6 card mt-5 mb-5 p-3 '>
             <form onSubmit={props.register}>
                 <div className='text-center mb-3'>
                     <h3>Create Account </h3>
