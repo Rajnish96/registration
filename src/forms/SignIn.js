@@ -29,7 +29,9 @@ export default function signIn(props) {
                 <button type='submit' className='btn btn-success form-control mb-2' >LogIn</button>
                 </div>
                 <div className='text-center mb-2'>
-                    <p><a href='/' onClick={props.switch}>Create</a> an Account</p>
+                    <p><a href='/' onClick={props.switch}>Create</a> an Account,<br/>
+                    <a href='/'>Forgot Password</a>
+                    </p>
                 </div>
             </form>
         </div>
