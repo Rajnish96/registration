@@ -1,28 +1,15 @@
 import React, { Component } from 'react'
 import SignUp from './forms/SignUp'
 import SignIn from './forms/SignIn'
-import { initializeApp } from "firebase/app";
+import { auth } from './Firebase';
 import { 
-  getAuth, 
   createUserWithEmailAndPassword,  
   signInWithEmailAndPassword, 
   sendEmailVerification,
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
-  // signInWithRedirect,
  } from "firebase/auth";
-// import { getDatabase } from "firebase/database";
-const firebaseConfig = {
-  apiKey: "AIzaSyBJz10NV5u_yK9mrdeNd70iBnL2uwxGqKA",
-  authDomain: "registration-72300.firebaseapp.com",
-  databaseURL: "https://registration-72300-default-rtdb.firebaseio.com",
-  projectId: "registration-72300",
-  storageBucket: "registration-72300.appspot.com",
-  messagingSenderId: "616732186119",
-  appId: "1:616732186119:web:830eb83f5f3b188e0cfca2"
-};
-const app = initializeApp(firebaseConfig);
 
 export default class App extends Component {
     constructor(props) {
@@ -50,7 +37,6 @@ export default class App extends Component {
         return;
       };
 
-      const auth = getAuth(app);
       createUserWithEmailAndPassword(auth, email, password)
       .then((success) => {
         sendEmailVerification(auth.currentUser)
@@ -73,7 +59,6 @@ export default class App extends Component {
       i.preventDefault();
       const email = i.target.email.value;
       const password = i.target.password.value;
-      const auth = getAuth(app);
       signInWithEmailAndPassword(auth, email, password)
       .then((success) => {
         console.log(success);
@@ -93,7 +78,6 @@ export default class App extends Component {
     googleHandlar =(event)=>{
       event.preventDefault();
       const provider = new GoogleAuthProvider();
-      const auth = getAuth(app);
       signInWithPopup(auth, provider)
       .then((success) => {
         console.log(success.user);
@@ -107,7 +91,6 @@ export default class App extends Component {
     facebookHandlar=(event)=>{
       event.preventDefault();
       const provider = new FacebookAuthProvider();
-      const auth = getAuth();
       signInWithPopup(auth, provider)
         .then((result) => {
           console.log(result);

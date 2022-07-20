@@ -16,7 +16,7 @@ export default function SignUp(props) {
                     <h3>Create Account </h3>
                     <h5>lets Start with your free Account</h5>
                 </div>
-                <div>
+                <div> 
                     <button type='button' onClick={props.google} className='btn btn-primary form-control mb-2' >SignUp via Google</button>
                     <button type='button' onClick={props.facebook} className='btn btn-info form-control mb-2' >SignUp via Facebook</button>
                 </div>

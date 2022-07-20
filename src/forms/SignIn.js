@@ -7,7 +7,7 @@ export default function signIn(props) {
     } else {
         msgClass.push('text-danger');
     }
-  return (<>
+  return (<>  
   <div className='container-fluid'> 
     <div className='row justify-content-evenly'>
         <div className='col-md-6 card mt-5 mb-5 p-3 '> 
@@ -15,7 +15,7 @@ export default function signIn(props) {
                 <div className='text-center mb-3'>
                     <h3>LogIn</h3>
                 </div>
-                <div>
+                <div> 
                     <button type='button' onClick={props.google} className='btn btn-primary form-control mb-2' >LogIn via Google</button>
                     <button type='button' onClick={props.facebook} className='btn btn-info form-control mb-2' >LogIn via Facebook</button>
                 </div>
