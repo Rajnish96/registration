@@ -5,7 +5,7 @@ export default function SignUp(props) {
     if(props.types){
         msgClass.push('text-success');
     } else {
-        msgClass.push('text-danger'); 
+        msgClass.push('text-info'); 
     }
   return(<>
   <div className='container-fluid'>
